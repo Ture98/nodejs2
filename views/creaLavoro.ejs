@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cerca Lavoro</title>
+</head>
+
+<body>
+  <%- include('./partial/nav.ejs') %>
+
+  <div class="creaLavoro">
+    <form action="/creaLavoro" method="POST">
+        <label for="title">Posizione</label>
+        <input type="text" id="title" name="title" required>
+        <label for="snippet">Mansione</label>
+        <input type="text" id="snippet" name="snippet" required>
+        <label for="paga">Paga</label>
+        <input type="text" id="paga" name="paga" required>
+        <button type="submit">Registra</button>
+    </form>
+  </div>
+  <%- include('./partial/footer.ejs') %>
+</body>
+</html>

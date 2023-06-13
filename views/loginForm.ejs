@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Effettua il login prima di proseeguire!</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+
+  <div class="bho">
+    <a href="/homepage"><h1>Benvenuto su Cerca Lavoro</h1></a>
+    <form action="/loginUtente" method="POST" class="form">
+      <%if (messages.error){%>
+        <%=messages.error%>
+      <%}%>
+      <p>Effettua il login come Utente</p>
+      <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password" >
+        <button type="submit">Login Come Utente</button>
+    </form>
+    
+    <form action="/loginAzienda" method="POST">
+        <%if (messages.error){%>
+          <%=messages.error%>
+        <%}%>
+        <p>Effettua il login come azienda</p>
+        <label for="email">Email</label>
+          <input type="text" id="email" name="email">
+          <label for="password">Password</label>
+          <input type="text" id="password" name="password" >
+          <label for="codiceAzienda">Codice Azienda</label>
+          <input type="text" id="codiceAzienda" name="codiceAzienda" >
+          <button type="submit">Login Aziendale</button>
+      </form>
+      <p></p>
+      <form action="/registrazione" method="GET"><button>Non sei un utente registrato? Clicca qui!</button></form>
+      <p></p>
+      <form action="/registrazioneAzienda" method="GET"><button>Non sei un azienda registrata? Clicca qui!</button></form>
+  </div>
+  <%- include('./partial/footer.ejs') %>
+</body>
+</html>

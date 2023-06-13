@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cerca Lavoro</title>
+</head>
+
+<body>
+  <%- include('./partial/navUtente.ejs') %>
+
+  <div class="creaLavoro">
+    <form action="/infoUtente" method="POST">
+        <label for="title">Nome</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="snippet">Cognome</label>
+        <input type="text" id="cognome" name="cognome" required>
+        <label for="paga">Descrizione</label>
+        <input type="text" id="descrizione" name="descrizione" required>
+        <button type="submit">Modifica profilo</button>
+    </form>
+  </div>
+  <%- include('./partial/footer.ejs') %>
+</body>
+</html>

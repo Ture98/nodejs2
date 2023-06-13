@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <p>Benvenuto, per utilizzare l'app al 100% effettua il <a href="/loginForm">login!</a> oppure registrati! dio merda</p>
+  <p>Forse un giorno aggiungerò un css </p>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <h1 class ="elenco">Elenco Utenti</h1>
+  <ul>
+    <% dati.Utente.forEach((utente) => { %>
+      <a href="/profiloUtente/:id"><li><%= utente.nome %></li></a>
+    <% }); %>
+  </ul>
+
+  <h1 class="elenco">Elenco Aziende</h1>
+  <ul>
+    <% dati.Azienda.forEach((azienda) => { %>
+      <li><%= azienda.email %></li>
+      <li><%= azienda.codiceAzienda %></li>
+    <% }); %>
+  </ul>
+</body>
+<%- include('./partial/footer.ejs') %>
+</html>

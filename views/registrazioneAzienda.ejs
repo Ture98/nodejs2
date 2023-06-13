@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cerca Lavoro</title>
+</head>
+
+<body>
+  <%- include('./partial/nav.ejs') %>
+
+  <div class="creaLavoro">
+    <form action="/registrazioneAzienda" method="POST">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required>
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password" required>
+        <label for="codiceAzienda">Codice Azienda</label>
+        <input type="text" id="codiceAzienda" name="codiceAzienda" required>
+        <button type="submit">Registra</button>
+    </form>
+  </div>
+  <%- include('./partial/footer.ejs') %>
+</body>
+</html>

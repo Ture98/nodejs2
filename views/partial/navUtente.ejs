@@ -1,0 +1,17 @@
+<nav>
+    <div class="site-title">
+      <a href="/"><h1>Cerca Lavoro || Bevenuto</h1></a>
+    </div>
+    <ul>
+      <li><a href="/offerteLavori">Visualizza Offerte di Lavoro</a></li>
+      <li><a href="/about">About us</a></li>
+      <li><a href="/infoUtente">Crea il tuo profilo professionale, se ne hai uno sfigato</a></li>
+      <li><a href="/profiloUtente/:id">Visualizza il tuo profilo Utente</a></li>
+      <li><a href="/logout">Logout</a></li>
+
+    </ul>
+    <form action="/caricaCV" method="POST" enctype="multipart/form-data">
+      <input type="file" name="cv" accept=".pdf,.doc,.docx,.txt">
+      <button type="submit">Carica CV</button>
+    </form>
+  </nav>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dettagli Offerta Lavoro </title>
+</head>
+
+<body>
+  
+  <%- include('./partial/navUtente.ejs') %>
+
+
+
+<div class="infoUtente">
+
+      <p class="nome">Nome:<%= infoUtente.nome %></p>
+      <p class="cognome">Cognome:<%= infoUtente.cognome %></p>
+      <p class="descrizione">Descrizione:<%= infoUtente.descrizione %></p>
+      
+</div>
+
+<%- include('./partial/footer.ejs') %>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cerca Lavoro</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  
+  <%- include('./partial/navUtente.ejs') %>
+
+
+
+<div class="offerte">
+
+  <h2 id="ciao">Tutte le offerte di lavoro</h2>
+
+  <% if(lavori.length > 0){ %>
+    <% lavori.forEach(lavoro => { %>
+      
+      <a href="/details/<%= lavoro._id %>"><h3 class="titolo">Posizione:<%=lavoro.title %></h3></a>
+      <p class="snippet">Mansione:<%=lavoro.snippet %></p>
+      <p class="paga">Paga:<%=lavoro.paga %></p>
+      <% }) %>
+    <% } %>
+</div>
+
+<%- include('./partial/footer.ejs') %>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login Azienda</title>
+</head>
+
+<body>
+  <%- include('./partial/nav.ejs') %>
+
+  <div class="creaLavoro">
+   
+    <form action="/loginAzienda" method="POST">
+      <%if (messages.error){%>
+        <%=messages.error%>
+      <%}%>
+      <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password" >
+        <label for="password">Codice Azienda</label>
+        <input type="text" id="codiceAzienda" name="codiceAzienda" >
+        <button type="submit">Login</button>
+    </form>
+  </div>
+  <%- include('./partial/footer.ejs') %>
+</body>
+</html>
